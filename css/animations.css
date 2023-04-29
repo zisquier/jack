@@ -1,0 +1,23 @@
+.letter1, .letter2, .letter3, .letter4,
+.letter5, .letter6, .letter7, .letter8,
+.letter9, .letter10, .letter11, .letter12 {
+  display: inline-block;
+  transition: all 0.3s ease-out;
+}
+
+.run-effect {
+  animation-name: animation;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+
+@keyframes animation {
+  0% {transform: scale3d(1, 1, 1);}
+  30% {transform: scale3d(1.25, 0.75, 1);}
+  40% {transform: scale3d(0.75, 1.25, 1);}
+  50% {transform: scale3d(1.15, 0.85, 1);}
+  65% {transform: scale3d(0.95, 1.05, 1);}
+  75% {transform: scale3d(1.05, 0.95, 1);}
+  100% {transform: scale3d(1, 1, 1);}
+  }
