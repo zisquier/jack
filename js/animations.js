@@ -15,16 +15,15 @@ function MaFonction (variable1)
                 });
     }
 
-const MON_ELEMENT = document.querySelector(".fade");
-window.addEventListener("DOMContentLoaded", () => 
-    {
-        MON_ELEMENT.classList.add("in");
-    });
-
-
-
-MaFonction (".letter1");
-MaFonction (".letter2");
+    const MON_ELEMENT = document.querySelector(".fade");
+    window.addEventListener("DOMContentLoaded", () => 
+        {
+            MON_ELEMENT.classList.add("in");
+        });
+    
+        
+        MaFonction (".letter1");
+        MaFonction (".letter2");
 MaFonction (".letter3");
 MaFonction (".letter4");
 MaFonction (".letter5");
@@ -35,6 +34,15 @@ MaFonction (".letter9");
 MaFonction (".letter10");
 MaFonction (".letter11");
 MaFonction (".letter12");
+MaFonction (".letter13");
+MaFonction (".letter14");
 
 
+const MUSIC_ON = document.getElementById('off');
+
+MUSIC_ON.addEventListener('click', () => 
+    {
+    MUSIC_ON.classList.toggle("activated");
+    console.log(MUSIC_ON);        
+    })
 

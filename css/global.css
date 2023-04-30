@@ -1,77 +1,117 @@
 
-
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
+  text-transform: none;
 }
-
 
 html {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 62.5%;
-  /* min-width: 320px;
-  line-height: 1.15; */
+  --Couleur_Titres : #08fdd8;
+  --Couleur_Liens : #019e86;
+  --Couleur_Textes : white;
+  --Couleur_Tags : #515152;
+  --Fonte_Titres: 'Sigmar', cursive;
+  --Fonte_Textes: Arial, Helvetica, sans-serif;
+  --Fonte_Tags : 'La Belle Aurore', cursive;
 }
-
-
 
 body {
-  background: #1d1d1d;
-  display: block;   
-  min-width: 320px;
-  line-height: 1.5;
-  overflow-y: scroll;                         /* permet le scroll en cas de débordement Y */
-  overflow-x: hidden;                         /* ne permet PAS le scroll en cas de débordement X */
-  color: #fff;
+  font-family: var(--Fonte_Textes);
+  color: var(--Couleur_Textes);
+  background-color: #1d1d1d;
 }
 
-h2::before {
-  content: '<h2>';
-  font-family: 'La Belle Aurore',cursive;
-  color: #515152;
-  font-size: 18px;
-  position: absolute;
-  margin-top: -4rem;
-  left: -1rem;
+p {
+  color:var(--Couleur_Textes);
+  font-family: var(--Fonte_Textes);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 2% 0 2% 0;
 }
 
 h2 {
-  /* font-family: 'Sigmar', cursive; */
-  color: #08fdd8;
+  font-family: var(--Fonte_Titres);
   font-weight: 400;
+  letter-spacing: -5px;
+  font-size: 3rem;
+  color: var(--Couleur_Titres);
   margin-top: 0;
   position: relative;
   margin-bottom: 40px;
-  left: -10px;
-}
-
-.container {
-  padding: 9rem 3rem;
-}
-
-
-  .container-page-zone1 {
-    width: 100%;
-  }
-    .container-page-zone1 header {
-      position: relative;
-      display: block;
-    }
-      .container-page-zone1 header h2 {
-        font-size: 2.5rem;
-        line-height: 4.9rem;
-      }
-
-h2 .letter {
-  color: #08fdd8;
-  font-weight: 400;
-  margin-top: 0;
-  position: relative;
-  margin-bottom: 40px;
-  left: 100px;
+  left: -15px;
   transition: all 0.3s ease-out;
 }
+
+a {
+  color: var(--Couleur_Liens);
+}
+.container-page::before  {
+  color: var(--Couleur_Tags);
+  font-family: var(--Fonte_Tags);
+  font-size: larger;
+  content: "<body>";
+}
+header::before {
+  color: var(--Couleur_Tags);
+  font-family: var(--Fonte_Tags);
+  font-size: larger;
+  content: "<h2>";
+}
+
+.container-page::after  {
+  color: var(--Couleur_Tags);
+  font-family: var(--Fonte_Tags);
+  font-size: larger;
+  content: "</body>";
+}
+header::after {
+  color: var(--Couleur_Tags);
+  font-family: var(--Fonte_Tags);
+  font-size: larger;
+  content: "</h2>";
+}
+.tag::after {
+  color: var(--Couleur_Tags);
+  font-family: var(--Fonte_Tags);
+  font-size: larger;
+  content: "</html>";
+}
+
+
+#sound {
+  display: flex;
+  margin: 2%;
+}
+#sound img {
+  height: 25px;
+  margin-right: 5px;
+}
+#sound a::before {
+  content: "OFF";
+  font-size: 0.9rem;
+}
+#sound a .activated::before {
+  content: 'ON';
+  font-size: 2.9rem;
+}
+
+
+#sound a {
+  color: #FD1056;
+  margin-left: 5px;
+  padding-top: 1px;
+  pointer-events: auto;
+}
+#sound p {
+  padding: 0;
+}
+
+
+.container {
+    padding: 0 5% 0 5%;
+}
+
 
 span pre  {
   display: inline;
