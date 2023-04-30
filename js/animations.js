@@ -38,11 +38,18 @@ MaFonction (".letter13");
 MaFonction (".letter14");
 
 
-const MUSIC_ON = document.getElementById('off');
+const MUSIC_ON = document.getElementById('sound');
 
 MUSIC_ON.addEventListener('click', () => 
     {
     MUSIC_ON.classList.toggle("activated");
-    console.log(MUSIC_ON);        
-    })
+    console.log(MUSIC_ON); 
+    
+    var x = document.getElementById("audio");
+    x.play(); 
+})
+
+
+
+
 

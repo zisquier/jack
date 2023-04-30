@@ -91,9 +91,9 @@ header::after {
   content: "OFF";
   font-size: 0.9rem;
 }
-#sound a .activated::before {
+#sound.activated a::before {
   content: 'ON';
-  font-size: 2.9rem;
+  font-size: 0.9rem;
 }
 
 
