@@ -1,37 +1,39 @@
-/* ------------------------- */
-/* Version en JavaScript pur */
-/* ------------------------- */
-"use strict";
 window.addEventListener("DOMContentLoaded", (event) => {
   animate_text();
 });
-// -------------------
+
+
 function animate_text() 
 {
-  let delay = 100, delay_start = 0, contents, letters;
+ // Je déclare mes variables utiles
+  let delay = 100 ;
+  let delay_start = 0 ;
+  let contents ;
+  let letters ;
 
-  document.querySelectorAll("span").forEach(function (elem) {
-    contents = elem.textContent.trim();
-    elem.textContent = "";
-    letters = contents.split("");
-    elem.style.visibility = 'visible';
+ // Je recupère dans MES_ELEMENTS tous les éléments span
+  const MES_ELEMENTS = document.querySelectorAll("span");
 
-    letters.forEach(function (letter, index_1) {
-      setTimeout(function () {
-        // ---------
-        // effet machine à écrire (SIMPLE)
-        elem.textContent += letter;
-        // ---------
-        // OU :
-        // effet machine à écrire + animation CSS (SPECIAL)
-        /*
-        var span = document.createElement('span');
-        span.innerHTML = letter.replace(/ /,'&nbsp;');
-        elem.appendChild(span);
-*/
-        // ---------
-      }, delay_start + delay * index_1);
-    });    
-    delay_start += delay * letters.length;
-  });
+/* Pour chacun (ForEach) de MES_ELEMENTS (chaque <span>) je créer une fonctione anonyme 
+dans laquelle on envoye 1 de  MES_ELEMENTS ---> element */
+MES_ELEMENTS.forEach(function (element) 
+    {
+    // on récupère dans la variable 'content' le texte contenu entre les balises selectionées
+      contents = element.textContent.trim();
+    // si je l'enlève çà double mes lettre mais j'ai pas compris à quoi çà sert
+      element.textContent = "";
+    // On convertie des lettres (string) au format tableau (array)
+      letters = contents.split("");
+    // on ajoute à l'élément span un parametre  style="visibility: visible;"
+      element.style.visibility = 'visible';
+
+      letters.forEach(function (letter) 
+        {
+          setTimeout(function () 
+            {
+              element.textContent += letter;
+            }, delay_start + delay);
+        });    
+      delay_start += delay * letters.length;
+    });
 }

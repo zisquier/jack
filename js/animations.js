@@ -15,6 +15,12 @@ function MaFonction (variable1)
                 });
     }
 
+const MON_ELEMENT = document.querySelector(".fade");
+window.addEventListener("DOMContentLoaded", () => 
+    {
+        MON_ELEMENT.classList.add("in");
+    });
+
 
 
 MaFonction (".letter1");
