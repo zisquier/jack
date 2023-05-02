@@ -11,9 +11,11 @@ html {
   --Couleur_Liens : #019e86;
   --Couleur_Textes : white;
   --Couleur_Tags : #515152;
+  --Couleur_cornes : black;
   --Fonte_Titres: 'Sigmar', cursive;
   --Fonte_Textes: Arial, Helvetica, sans-serif;
   --Fonte_Tags : 'La Belle Aurore', cursive;
+
 }
 
 body {
@@ -80,8 +82,9 @@ header::after {
 
 
 #sound {
-  display: flex;
+  display: inline-flex;
   margin: 2%;
+  justify-content: left;
 }
 #sound img {
   height: 25px;
@@ -117,9 +120,49 @@ span pre  {
   display: inline;
 }
 
+#button {
+  width : 50px;
+  height: 50px;
+  float : right;
+  margin: 15px;
+}
 
+#img1, #img2 {
+  background-size: 35%;
+  background-repeat: no-repeat;
+  height: 100px;
+  width:100px;
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 7px;
+  
+}
+
+#img1 {
+  display: none;
+  z-index: 2;
+  background-image: url("/img/img_corne1.png");
+
+
+} 
+#img2 {
+  display: block;
+  z-index: 2;
+  background-image: url("/img/img_corne2.png");
+ 
+}
+
+.pivoter {
+  animation-name: rotation;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+}
 
 
 @media screen and (max-width: 600px) {
+
+
+
+
 
 }
