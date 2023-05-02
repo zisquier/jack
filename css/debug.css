@@ -6,6 +6,15 @@ p {
   border:2px dotted blue;
 }
 
+
+#button  {
+  border:2px dotted green;
+}
+
+#button a {
+  border:2px solid green;
+}
+
 .container {
     border: 4px solid black;
   }
@@ -28,4 +37,24 @@ p {
       .container-page-zone2 header h2 {
         border: 2px dotted rgb(82, 5, 224);
       }
+
+.navigation-top {
+  border: 2px dotted white;
+}
+
+.navigation-flex {
+  border: 2px dotted gray;
+}
+
+.navigation-top img {
+  border: 2px dotted rgb(148, 18, 18);
+}
+
+.navigation-top div {
+  border: 2px dotted rgb(226, 42, 42);
+}
+
+.navigation-top div p{
+  border: 1px dotted rgb(207, 207, 207);
+}
 
