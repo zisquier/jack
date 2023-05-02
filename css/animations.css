@@ -1,6 +1,4 @@
-.letter1, .letter2, .letter3, .letter4,
-.letter5, .letter6, .letter7, .letter8,
-.letter9, .letter10, .letter11, .letter12, .letter13, .letter14 {
+.letter {
   display: inline-block;
   transition: all 0.3s ease-out;
 }
@@ -25,7 +23,7 @@
 
 .in {
   opacity: 1;
-  transition: 1s ease-in-out;
+  transition: 6s ease-in-out;
 }
 
 @keyframes animation {

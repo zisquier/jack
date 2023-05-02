@@ -1,55 +1,56 @@
-function MaFonction (variable1) 
-    {
-        const MON_ELEMENT = document.querySelector(variable1);
-        MON_ELEMENT.addEventListener("mouseover",() => 
+        function MaFonction (variable1) 
         {
-            MON_ELEMENT.classList.add("run-effect");  
-        });
-        
-        MON_ELEMENT.addEventListener("mouseout",() => 
+            // je recupère une NodeList
+            const MES_ELEMENTS = document.querySelectorAll(variable1); 
+
+            // Pour chacun (For each) de MES_ELEMENTS de ma NodeList je récupère un 
+            // élement dans ma constante "un_element"
+            MES_ELEMENTS.forEach(un_element => 
                 {
-                    setTimeout(function()
-                        {
-                            MON_ELEMENT.classList.remove("run-effect");
-                        },1000); 
+                    // ici je recupère le nom de la class de mon élément
+                    const la_classe = un_element.className;
+                 
+                    // je test "un_element" si la souris passe dessus
+                    un_element.addEventListener("mouseover",() => 
+                    {
+                        // si c'est true alors on ajoute la classe "run-effect"
+                        un_element.classList.add("run-effect");
+                    });
+                    
+                    //je test "un_element" si la souris ne passe plus dessus
+                    un_element.addEventListener("mouseout",() => 
+                        {   
+                            // si oui alors on déclenche une durée de 1seconde
+                            setTimeout(function()
+                                {
+                                    // à la fin des 1 seconde on retire la classe "run-effect" 
+                                    un_element.classList.remove("run-effect");
+                                },1000);
+                        });
                 });
-    }
+        }
+    
 
-    const MON_ELEMENT = document.querySelector(".fade");
-    window.addEventListener("DOMContentLoaded", () => 
+    const MON_ELEMENT = document.querySelector("html");
+        window.addEventListener("DOMContentLoaded", () => 
+            {
+                MON_ELEMENT.classList.add("in");
+            });
+      
+    MaFonction (".letter");
+    
+    
+    
+    const MUSIC_ON = document.getElementById('sound');
+    
+    MUSIC_ON.addEventListener('click', () => 
         {
-            MON_ELEMENT.classList.add("in");
-        });
-    
+        MUSIC_ON.classList.toggle("activated");
+        console.log(MUSIC_ON); 
         
-        MaFonction (".letter1");
-        MaFonction (".letter2");
-MaFonction (".letter3");
-MaFonction (".letter4");
-MaFonction (".letter5");
-MaFonction (".letter6");
-MaFonction (".letter7");
-MaFonction (".letter8");
-MaFonction (".letter9");
-MaFonction (".letter10");
-MaFonction (".letter11");
-MaFonction (".letter12");
-MaFonction (".letter13");
-MaFonction (".letter14");
-
-
-const MUSIC_ON = document.getElementById('sound');
-
-MUSIC_ON.addEventListener('click', () => 
-    {
-    MUSIC_ON.classList.toggle("activated");
-    console.log(MUSIC_ON); 
+        var x = document.getElementById("audio");
+        x.play(); 
+    })
     
-    var x = document.getElementById("audio");
-    x.play(); 
-})
-
-
-
-
-
+    
+    
