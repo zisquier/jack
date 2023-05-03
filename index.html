@@ -7,8 +7,7 @@
     
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/animations.css">
-    <!-- <link rel="stylesheet" href="css/debug.css"> -->
-
+   <!-- <link rel="stylesheet" href="css/debug.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
@@ -20,40 +19,21 @@
     <title>Document</title>
 </head>
 
-    <audio id="audio">
-        <source src="audio/InvisibleBreath.mp3" type="audio/mpeg">
-    </audio>
+<audio id="audio">
+    <source src="audio/InvisibleBreath.mp3" type="audio/mpeg">
+</audio>
+<div id="sound" class="">
+    <img src="img/soundcloud.png" alt="">
+    <p>Sound</p>
+    <a id="off" href="#"></a>
+</div>    
 
     <div id="button">
         <a href="#" id="img1" class=""></a>
         <a href="#" id="img2" class=""></a>
     </div>
 
-    <div class="navigation-top">
-        <img src="img/2023-05-03 00_50_35-Window.png" alt="">
-        <div>
-            <p>
-                Jack
-            </p>
-        </div>
-
-        <div>
-            <p>
-                Web Developper
-            </p>
-        </div>
-    </div>
-
-
-
-<body  class="main-page">
-    <div id="sound" class="">
-        <img src="img/soundcloud.png" alt="">
-        <p>Sound</p>
-        <a id="off" href="#"></a>
-    </div>
-
-    <nav id="navigation" class="">
+    <nav id="navigation" class="off">
         <ul>
             <li>About</li>
             <li>My Skills</li>
@@ -65,7 +45,24 @@
 
 
 
-    <div class="tag">
+    <div class="navigation-top off">
+        <img src="img/logo.png" alt="">
+        
+            <span id="nom">
+                Jack
+            </span>    
+            <span id="profession">
+                Web Developper
+            </span>    
+    </div>        
+
+
+
+
+<body  class="main-page">
+
+
+    <div class="tag on">
         <div class="container">
             <div class="container-page">
                 <div class="container-page-zone1">
@@ -102,7 +99,6 @@
 
 <script src="js/0_declarations.js"></script>
 <script src="js/1_pageloading.js"></script>
-<script src="js/2_animations.js"></script>
-
+<script src="js/3_elements_cliquables.js"></script>
 </body>
 </html>

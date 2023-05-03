@@ -1,10 +1,5 @@
-// Appele de la fonction pour l'animation des lettres quand on passe la souris dessus
-TitreSfx (".letter");
-    
-    
+   
 // Activation ON ou OFF de la musique
-
-
 // On recupère l'élément 
 const MUSIC = document.getElementById('sound');
 
@@ -31,11 +26,13 @@ MUSIC.addEventListener('click', () =>
 
 
 
-
+// le menu avec la main
 
 // récupère l'élément <a id="img2" class="" href="#">
 const PIVOT = document.getElementById('img2');
 const PIVOT2 = document.getElementById('img1');
+const TIME_HAND = 350;
+const TIME_CLASS = TIME_HAND * 2;
 
     // Si l'evenement "click" se fait sur le contenu de PIVOT alors on applique la méthode
     PIVOT.addEventListener('click', () =>
@@ -51,12 +48,30 @@ const PIVOT2 = document.getElementById('img1');
                         PIVOT.style.display = "none";
                         PIVOT2.style.display = "inline-block";
                         PIVOT2.classList.add("pivoter2");
-                    },500);
+                    },TIME_HAND);
 
                 setTimeout(function()
                     {
                         PIVOT2.classList.remove("pivoter2");
-                    },1000);
+                        // on affiche et masque certains elements
+                            const TAG = document.querySelector(".tag");
+                            console.log("récupéré par tag : ",TAG);
+    
+                            TAG.classList.add("off");
+                            TAG.classList.remove("on");
+    
+                            const NAV = document.getElementById("navigation");
+                            NAV.classList = "on";
+                            
+                            const NAVTOP = document.querySelector(".navigation-top");
+                            console.log("récupéré par navtop : ",NAVTOP);
+                            NAVTOP.classList.remove("off");
+                            NAVTOP.classList.add("on");
+                    },TIME_CLASS);
+            
+
+
+
         });
     // Si l'evenement "click" se fait sur le contenu de PIVOT alors on applique la méthode
     PIVOT2.addEventListener('click', () =>
@@ -72,12 +87,30 @@ const PIVOT2 = document.getElementById('img1');
                         PIVOT2.style.display = "none";
                         PIVOT.style.display = "inline-block";
                         PIVOT.classList.add("pivoter2");
-                    },500);
+                    },TIME_HAND);
 
                 setTimeout(function()
                     {
                         PIVOT.classList.remove("pivoter2");
-                    },1000);
+                        // on affiche et masque certains elements
+                        const TAG = document.querySelector(".tag");
+                        console.log("récupéré par tag  : ",TAG);
+    
+                        TAG.classList.add("on");
+                        TAG.classList.remove("off");
+    
+                        const NAV = document.getElementById("navigation");
+                        console.log("récupéré par nav : ",NAV);
+                        NAV.classList = "off";
+    
+                        const NAVTOP = document.querySelector(".navigation-top");
+                        console.log("récupéré par navtop : ",NAVTOP);
+                        NAVTOP.classList.remove("on");
+                        NAVTOP.classList.add("off");
+                    },TIME_CLASS);
+
+
+
         });
 
 

@@ -30,10 +30,11 @@ function TitreSfx (variable1)
                         });
                 });
         }
+// Appele de la fonction pour l'animation des lettres quand on passe la souris dessus
+TitreSfx (".letter");
 
 
-
-// Effet sool sur les titres quand on passe la souris dessus
+// les lettre des titre apparaissent au fur et a mesure
 function animate_text() 
         {
          // Je déclare mes variables utiles
@@ -65,7 +66,9 @@ function animate_text()
                       element.textContent += letter;
                     }, delay_start + delay);
                 });    
-              delay_start += delay * letters.length;
+              delay_start += delay-10 * letters.length;
             });
         }
+
+        
 
