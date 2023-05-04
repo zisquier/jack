@@ -1,0 +1,69 @@
+.container-cube {
+    width: var(--cube);
+    height: var(--cube);
+    /* left: 250px; */
+    margin: auto;
+    position :relative;
+    perspective: 500px;
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    margin: 100px auto 0;
+    transform-style: preserve-3d;
+    animation: tourner_cube 10s infinite linear;
+}
+
+.face {
+    position: absolute;
+    width: var(--cube);
+    height:  var(--cube);
+ 
+    font-size: 1.5rem;
+    font-weight: 800px;
+    color: rgb(4, 161, 235);
+}
+
+
+
+
+/* .txt-top {
+    
+  } */
+.txt-bot {
+    rotate: 180deg;
+    margin-top: 145px;
+
+  }
+
+  .top, .back, .front, .bottom, .left, .right {
+    background-color: black;
+    border: 1px solid rgba(78, 199, 247, 0.192);
+  }
+  
+.top {
+
+    transform:  rotateX(90deg) translateZ(100px);
+}
+.bottom {
+
+    transform:  rotateX(-90deg) translateZ(100px);
+}
+.right {
+
+    transform:  rotateY(90deg) translateZ(100px);
+}
+.left {
+
+    transform:  rotateY(-90deg) translateZ(100px);
+}
+.front {
+
+    transform:  rotateX(0deg) translateZ(100px);
+}
+.back {
+
+    transform:  rotateX(-180deg) translateZ(100px);
+}
+

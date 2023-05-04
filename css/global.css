@@ -10,6 +10,7 @@
 }
 
 html {
+  --cube : 200px;
   --Couleur_Titres : #08fdd8;
   --Couleur_Liens : #019e86;
   --Couleur_Textes : white;
@@ -26,8 +27,13 @@ body {
   font-family: var(--Fonte_Textes);
   color: var(--Couleur_Textes);
   background-color: #1d1d1d;
+
 }
 
+footer {
+  width: 100%;
+  height: 150px;
+}
 
 h2 {
   font-family: var(--Fonte_Titres);

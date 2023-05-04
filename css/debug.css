@@ -55,3 +55,31 @@ p {
   border: 2px dotted rgb(141, 22, 22);
 }
 
+.top, .back, .front, .bottom, .left, .right {
+  border: 5px dotted white;
+}
+
+.top {
+  background-color: aquamarine;
+
+}
+.bottom {
+  background-color: blue;
+
+}
+.right {
+
+background-color: blueviolet;
+}
+.left {
+
+background-color: brown;
+}
+.front {
+background-color: chartreuse;
+}
+.back {
+
+background-color: chocolate;
+}
+
