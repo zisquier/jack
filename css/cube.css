@@ -6,6 +6,14 @@
     position :relative;
     perspective: 500px;
 }
+.container-cube-flotte {
+    width: var(--cube);
+    height: var(--cube);
+    margin: auto;
+    position :absolute;
+    perspective: 500px;
+    
+}
 
 .cube {
     width: 100%;
@@ -13,7 +21,9 @@
     margin: 100px auto 0;
     transform-style: preserve-3d;
     animation: tourner_cube 10s infinite linear;
+    /* cursor:none; */
 }
+
 
 .face {
     position: absolute;

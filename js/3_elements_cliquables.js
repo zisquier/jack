@@ -108,9 +108,47 @@ const TIME_CLASS = TIME_HAND * 2;
                         NAVTOP.classList.remove("on");
                         NAVTOP.classList.add("off");
                     },TIME_CLASS);
-
-
-
         });
+
+
+
+
+
+    let ONOFF = false;
+    const CUBICLIC = document.querySelector(".cube");
+    const CUBIBOUGE = document.querySelector(".container-cube");
+    let test;
+
+
+    CUBICLIC.addEventListener('click', (ahah) => {
+        if(!ONOFF)
+            {
+                CUBIBOUGE.className = "container-cube-flotte";
+                document.addEventListener('mousemove', evenement => {
+                    
+                CUBIBOUGE.setAttribute('style','top:'+(evenement.pageY -200)+"px; left:"+(evenement.pageX-200)+"px;");
+        
+            });
+        }
+        ONOFF = true;
+        console.log(ONOFF);                   
+
+    });
+
+    document.addEventListener('dblclick', (ohoh) => {
+        if(ONOFF)
+            {
+                CUBIBOUGE.className = "container-cube";
+                CUBIBOUGE.removeAttribute('style');
+            }
+            ONOFF = false;
+            console.log(ONOFF);
+    });
+
+
+
+
+            
+
 
 
